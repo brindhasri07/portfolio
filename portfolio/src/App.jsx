@@ -45,10 +45,9 @@ function App() {
 
       {/* Hero */}
       {/* Hero */}
-<section className="max-w-6xl mx-auto min-h-screen flex items-center px-6 pt-28 md:pt-8">
-
+<section className="max-w-6xl mx-auto min-h-screen flex flex-col md:flex-row items-center justify-center gap-10 px-6 pt-28 md:pt-8 overflow-hidden">
   {/* Left Side */}
-  <div className="lg:w-1/2">
+  <div className="w-full md:w-1/2">
 
     <h1 className="text-5xl md:text-7xl font-bold leading-tight">
       BRINDHA
@@ -85,7 +84,7 @@ function App() {
   </div>
 
   {/* Right Side Card */}
-  <div className="lg:w-1/2 flex justify-center">
+  <div className="w-full md:w-1/2 flex justify-center">
 
     <div className="bg-slate-800/80 backdrop-blur-lg border border-slate-700 rounded-3xl p-8 shadow-2xl w-full max-w-md floating-3d">
 
