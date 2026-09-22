@@ -9,7 +9,7 @@ function App() {
   ];
 
   return (
-  <div className="bg-slate-900 text-white min-h-screen relative overflow-visible scroll-smooth">
+  <div className="bg-slate-900 text-white min-h-screen relative overflow-x-hidden scroll-smooth">
    className="bg-slate-950 text-white min-h-screen relative overflow-hidden scroll-smooth"
    {/* Super Animated Background */}
 <div className="fixed inset-0 -z-10 overflow-hidden bg-slate-950">
@@ -28,14 +28,15 @@ function App() {
       <nav className="fixed top-0 left-0 w-full z-50 bg-slate-900/60 backdrop-blur-lg border-b border-slate-700">
   <div className="max-w-6xl mx-auto flex justify-between items-center p-4">
 
-    <h1 className="font-bold text-xl text-blue-500">
-      Brindha Sri
-    </h1>
+    <h1 className="font-bold text-xl text-blue-500 whitespace-nowrap flex-shrink-0">
+  Brindha Sri
+</h1>
 
-    <div className="space-x-6">
+    <div className="flex gap-4 md:gap-6 overflow-x-auto whitespace-nowrap ml-4">
       <a href="#about" className="hover:text-blue-500 transition">About</a>
       <a href="#projects" className="hover:text-blue-500 transition">Projects</a>
       <a href="#skills" className="hover:text-blue-500 transition">Skills</a>
+      <a href="#certificates" className="hover:text-blue-500 transition">Certificates</a>
       <a href="#contact" className="hover:text-blue-500 transition">Contact</a>
     </div>
 
@@ -44,12 +45,12 @@ function App() {
 
       {/* Hero */}
       {/* Hero */}
-<section className="min-h-screen flex flex-col lg:flex-row items-center justify-between px-10 gap-10">
+<section className="max-w-6xl mx-auto min-h-screen flex items-center px-6 pt-28 md:pt-8">
 
   {/* Left Side */}
   <div className="lg:w-1/2">
 
-    <h1 className="text-6xl md:text-7xl font-bold">
+    <h1 className="text-5xl md:text-7xl font-bold leading-tight">
       BRINDHA
       <span className="block text-blue-500">
         SRI S
@@ -246,35 +247,93 @@ function App() {
 
 </section>
 
-      {/* Certificates */}
-<section className="max-w-6xl mx-auto p-8">
+ {/* Certificates */}
+<section id="certificates" className="max-w-6xl mx-auto p-8">
 
   <h2 className="text-4xl font-bold mb-6">
     Certificates
   </h2>
 
-  <div className="bg-slate-800 p-6 rounded-2xl">
+  <div className="grid md:grid-cols-2 gap-6">
 
-    <h3 className="text-2xl font-bold">
-      ReactJS Developer Internship
-    </h3>
-
-    <p className="text-gray-300 mt-2">
-      Skywin Academy, Trichy
-    </p>
-
-    <p className="text-gray-400 mt-4">
-      Successfully completed internship training and project development in ReactJS and Frontend Development.
-    </p>
-
-    <a
-      href="https://drive.google.com/file/d/1j-NwH1trjCYw22k9Xd9ZwMQlG8UxXLXi/view"
-      target="_blank"
-      rel="noreferrer"
-      className="inline-block mt-6 bg-blue-600 px-5 py-2 rounded-lg"
+    {/* Qryptex Certificate */}
+    <div
+      className="bg-slate-800 border border-slate-700 rounded-2xl p-6 shadow-xl
+      transition-all duration-300
+      hover:-translate-y-2 hover:rotate-1 hover:shadow-2xl"
     >
-      View Certificate
-    </a>
+
+      <h3 className="text-2xl font-bold">
+        Frontend Development Internship
+      </h3>
+
+      <p className="text-gray-300 mt-2">
+        Qryptex
+      </p>
+
+      <p className="text-gray-400 mt-2">
+        Certificate of Completion
+      </p>
+
+      <p className="text-gray-400 mt-2">
+        Issued Date: June 06, 2026
+      </p>
+
+      <p className="text-gray-400 mt-2">
+        Certificate ID: QRY-INT-2026-003
+      </p>
+
+      <p className="text-gray-400 mt-4 leading-relaxed">
+        Successfully completed the Frontend Development Internship,
+        gaining practical experience in frontend technologies and
+        developing a personal portfolio website using modern tools
+        and best practices.
+      </p>
+
+      <a
+        href={`${import.meta.env.BASE_URL}qryptex.pdf`}
+        target="_blank"
+        rel="noreferrer"
+        className="inline-block mt-6 bg-blue-600 hover:bg-blue-700
+        px-5 py-2 rounded-lg transition-all duration-300"
+      >
+        View Certificate →
+      </a>
+
+    </div>
+
+
+    {/* Skywin Certificate */}
+    <div
+      className="bg-slate-800 border border-slate-700 rounded-2xl p-6 shadow-xl
+      transition-all duration-300
+      hover:-translate-y-2 hover:-rotate-1 hover:shadow-2xl"
+    >
+
+      <h3 className="text-2xl font-bold">
+        ReactJS Developer Internship
+      </h3>
+
+      <p className="text-gray-300 mt-2">
+        Skywin Academy, Trichy
+      </p>
+
+      <p className="text-gray-400 mt-4 leading-relaxed">
+        Successfully completed internship training and project
+        development in ReactJS and Frontend Development.
+      </p>
+
+      <a
+        href="https://drive.google.com/file/d/1j-NwH1trjCYw22k9Xd9ZwMQlG8UxXLXi/view"
+        target="_blank"
+        rel="noreferrer"
+        className="inline-block mt-6 bg-blue-600 hover:bg-blue-700
+        px-5 py-2 rounded-lg transition-all duration-300"
+      >
+        View Certificate →
+      </a>
+
+    </div>
 
   </div>
 
