@@ -72,13 +72,13 @@ function App() {
       </a>
 
       <a
-        href="https://drive.google.com/file/d/1Ch9dz4iq8uFXJNnR1Qz-sNbWL7Erk6qC/view"
-        target="_blank"
-        rel="noreferrer"
-        className="bg-green-600 px-6 py-3 rounded-lg"
-      >
-        Resume
-      </a>
+  href={`${import.meta.env.BASE_URL}Brindha_Sri_Resume.pdf`}
+  target="_blank"
+  rel="noreferrer"
+  className="bg-green-600 px-6 py-3 rounded-lg"
+>
+  Resume
+</a>
     </div>
 
   </div>
